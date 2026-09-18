@@ -893,14 +893,14 @@ button:focus-visible {
     margin: 0 0 4px;
 }
 
-/* GRID DE PROJETOS FLEXÍVEL */
+/* GRID DE PROJETOS CORRIGIDO */
 .project-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    grid-auto-rows: minmax(180px, auto);
+    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 10px;
+    height: 52vh;
     margin-top: 35px;
-    align-items: stretch;
 }
 
 .project-card {
@@ -908,13 +908,12 @@ button:focus-visible {
     text-align: left;
     padding: 23px;
     border: 1px solid var(--line);
-    background: linear-gradient(145deg, rgba(255, 255, 255, .02), rgba(255, 255, 255, .005));
+    background: linear-gradient(145deg, rgba(255, 255, 255, .018), rgba(255, 255, 255, .006));
     overflow: hidden;
     transition: .4s var(--ease);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 
 .project-card::before {
@@ -925,30 +924,29 @@ button:focus-visible {
     border-radius: 50%;
     right: -80px;
     bottom: -80px;
-    background: rgba(123, 228, 56, .08);
+    background: rgba(123, 228, 56, .06);
     transition: .5s;
 }
 
 .project-card:hover {
-    border-color: var(--green);
+    border-color: rgba(123, 228, 56, .45);
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(123, 228, 56, 0.15);
 }
 
 .project-card:hover::before {
     transform: scale(1.7);
-    background: rgba(155, 92, 255, .15);
+    background: rgba(155, 92, 255, .08);
 }
 
-.project-card:first-child {
+/* Primeiro card ocupa 2 linhas na primeira coluna */
+.project-card.featured {
     grid-row: span 2;
-    background: linear-gradient(145deg, rgba(123, 228, 56, .08), rgba(155, 92, 255, .04));
+    background: linear-gradient(145deg, rgba(123, 228, 56, .055), rgba(155, 92, 255, .025));
 }
 
 .project-no {
     font: 8px 'DM Mono';
     color: var(--green);
-    flex-shrink: 0;
 }
 
 .project-card small {
@@ -956,17 +954,14 @@ button:focus-visible {
     color: #626963;
     font: 7px 'DM Mono';
     letter-spacing: .15em;
-    margin-top: 12px;
-    flex-shrink: 0;
+    margin-top: 18px;
 }
 
 .project-card strong {
     display: block;
     font-size: clamp(15px, 1.8vw, 25px);
     letter-spacing: -.04em;
-    margin-top: auto;
-    margin-bottom: 8px;
-    flex-shrink: 0;
+    margin-top: 8px;
 }
 
 .project-card em {
@@ -974,8 +969,8 @@ button:focus-visible {
     color: #727972;
     font: 7px/1.6 'DM Mono';
     font-style: normal;
-    margin-top: 0;
-    flex-shrink: 0;
+    margin-top: 10px;
+    max-width: 300px;
 }
 
 .project-card>b {
@@ -1432,7 +1427,13 @@ dialog.closing::backdrop {
 
     .project-grid {
         grid-template-columns: 1fr 1fr;
-        grid-auto-rows: minmax(160px, auto);
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .project-card.featured {
+        grid-column: span 2;
+        grid-row: auto;
     }
 
     .project-card:first-child {
@@ -1640,8 +1641,30 @@ dialog.closing::backdrop {
 
     .project-grid {
         grid-template-columns: 1fr;
-        grid-auto-rows: minmax(140px, auto);
+        grid-template-rows: auto;
         height: auto;
+    }
+
+    .project-card.featured {
+        grid-column: auto;
+    }
+
+    .project-card {
+        padding: 11px;
+    }
+
+    .project-card small {
+        font-size: 5px;
+        margin-top: 9px;
+    }
+
+    .project-card strong {
+        font-size: 11px;
+    }
+
+    .project-card em {
+        font-size: 5px;
+        margin-top: 4px;
     }
 
     .project-card:first-child {
