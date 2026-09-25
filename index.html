@@ -1,0 +1,1127 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#070808">
+
+  <meta name="description" content="Portfólio de Lorenzo — desenvolvimento, hardware e projetos criativos.">
+
+  <title>Lorenzo — Desenvolvedor</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- FUNDO -->
+  <div class="noise" aria-hidden="true"></div>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+
+  <!-- LOADER / TRANSIÇÃO -->
+  <div class="loader" aria-hidden="true">
+
+    <div class="loader__panel loader__panel--a"></div>
+    <div class="loader__panel loader__panel--b"></div>
+    <div class="loader__panel loader__panel--c"></div>
+
+    <div class="loader__meta" id="loaderLabel">
+      <span>01</span>
+      <b>INÍCIO</b>
+    </div>
+
+  </div>
+
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <button class="brand" data-go="0" aria-label="Ir para início">
+      <span class="brand__mark">L</span>
+      <span class="brand__name">Lorenzo</span>
+    </button>
+
+
+    <div class="header-center">
+
+      <span id="sectionCode">01</span>
+
+      <i></i>
+
+      <span id="sectionName">INÍCIO</span>
+
+      <div id="pageProgress" aria-hidden="true"></div>
+
+    </div>
+
+
+    <button class="menu-button" type="button" aria-label="Abrir navegação" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+
+  </header>
+
+
+  <!-- MENU -->
+  <div class="mobile-menu" aria-hidden="true">
+
+    <div class="mobile-menu__inner">
+
+      <p class="eyebrow">
+        NAVEGAR / <span>06 SEÇÕES</span>
+      </p>
+
+      <button data-go="0">
+        <span>01</span>
+        <strong>Início</strong>
+        <em>↗</em>
+      </button>
+
+      <button data-go="1">
+        <span>02</span>
+        <strong>Sobre</strong>
+        <em>↗</em>
+      </button>
+
+      <button data-go="2">
+        <span>03</span>
+        <strong>Skills</strong>
+        <em>↗</em>
+      </button>
+
+      <button data-go="3">
+        <span>04</span>
+        <strong>Formação</strong>
+        <em>↗</em>
+      </button>
+
+      <button data-go="4">
+        <span>05</span>
+        <strong>Projetos</strong>
+        <em>↗</em>
+      </button>
+
+      <button data-go="5">
+        <span>06</span>
+        <strong>Contato</strong>
+        <em>↗</em>
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+         STAGE
+         ========================================= -->
+
+  <main id="stage">
+
+
+    <!-- =====================================
+             01 — INÍCIO
+             ===================================== -->
+
+    <section class="page page--active" data-index="0" data-name="INÍCIO">
+
+      <div class="page-grid"></div>
+
+
+      <div class="hero-code" data-morph>
+        const <em>lorenzo</em> = {<br>
+        <span>code: true,</span><br>
+        <span>ideas: ∞,</span><br>
+        <span>build: "now"</span><br>
+        };
+      </div>
+
+
+      <div class="hero-copy" data-morph>
+
+        <p class="eyebrow">
+          01 / DESENVOLVEDOR & CRIADOR
+        </p>
+
+        <h1>
+          Lorenzo<span>.</span>
+          <small>Desenvolvedor</small>
+        </h1>
+
+        <p class="hero-lead">
+          Transformo ideias em experiências digitais,
+          sistemas e projetos que juntam
+          <strong>código, criatividade e tecnologia.</strong>
+        </p>
+
+
+        <div class="actions hero-actions">
+
+          <div class="actions__secondary">
+
+            <button class="cta cta--highlight" data-go="4">
+              explorar projetos
+            </button>
+
+            <button class="cta cta--highlight" data-go="5">
+              falar comigo
+            </button>
+
+          </div>
+
+
+          <div class="actions__primary">
+
+            <button class="cta cta--primary" data-go="1">
+              me conheça melhor
+              <span>→</span>
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="social-row">
+
+          <button data-go="5">GH</button>
+          <button data-go="5">in</button>
+          <button data-go="5">@</button>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-art" data-morph aria-hidden="true">
+
+        <div class="hero-art__ring r1"></div>
+        <div class="hero-art__ring r2"></div>
+        <div class="hero-art__ring r3"></div>
+
+        <div class="hero-art__mark">L</div>
+
+        <span class="hero-art__label top">
+          BUILD / 2026
+        </span>
+
+        <span class="hero-art__label bottom">
+          JACAREÍ · SP
+        </span>
+
+      </div>
+
+
+      <div class="hero-hint">
+        <span>navegue pelos botões</span>
+        <i>↓</i>
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+             02 — SOBRE
+             ===================================== -->
+
+    <section class="page" data-index="1" data-name="SOBRE">
+
+      <div class="page-inner about-page">
+
+        <div class="page-title" data-morph>
+
+          <p class="eyebrow">
+            02 / QUEM ESTÁ POR TRÁS
+          </p>
+
+          <h2>
+            Mais que código.<br>
+            <em>Curiosidade em movimento.</em>
+          </h2>
+
+        </div>
+
+
+        <div class="about-columns">
+
+          <div class="about-text" data-morph>
+
+            <span class="big-number">02</span>
+
+            <p>
+              Gosto de entender como as coisas funcionam —
+              e principalmente de descobrir como podem
+              funcionar melhor.
+            </p>
+
+            <p>
+              Minha trajetória passa por desenvolvimento web,
+              hardware, Arduino, Raspberry Pi, banco de dados,
+              modelagem 3D e projetos em que software e mundo
+              físico se encontram.
+            </p>
+
+          </div>
+
+
+          <div class="about-quote" data-morph>
+
+            <b>"</b>
+
+            <strong>
+              Aprender.<br>
+              Testar.<br>
+              Construir.
+            </strong>
+
+            <span>
+              É assim que eu gosto de criar.
+            </span>
+
+          </div>
+
+
+          <div class="about-facts" data-morph>
+
+            <div>
+              <b>01</b>
+              <strong>Desenvolvimento</strong>
+              <span>Web & software</span>
+            </div>
+
+            <div>
+              <b>02</b>
+              <strong>Experimentação</strong>
+              <span>Arduino & Raspberry Pi</span>
+            </div>
+
+            <div>
+              <b>03</b>
+              <strong>Criação</strong>
+              <span>3D, interfaces & protótipos</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="actions about-actions">
+
+          <div class="actions__secondary">
+
+            <button class="cta cta--subtle" data-go="0">
+              ← voltar ao início
+            </button>
+
+          </div>
+
+
+          <div class="actions__primary">
+
+            <button class="cta cta--primary" data-go="2">
+              ver minhas skills
+              <span>→</span>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+             03 — SKILLS
+             ===================================== -->
+
+    <section class="page" data-index="2" data-name="SKILLS">
+
+      <div class="page-inner skills-page">
+
+        <div class="page-title" data-morph>
+
+          <p class="eyebrow">
+            03 / FERRAMENTAS
+          </p>
+
+          <h2>
+            Skills<span>.</span>
+          </h2>
+
+          <p class="subtitle">
+            Tecnologia é ferramenta. O projeto é o que importa.
+          </p>
+
+        </div>
+
+
+        <div class="skills-grid" data-morph>
+
+          <article>
+
+            <span>01</span>
+
+            <h3>Front-end</h3>
+
+            <p>
+              Interfaces responsivas, animações e
+              experiências construídas do zero.
+            </p>
+
+            <div>
+              <i>HTML</i>
+              <i>CSS</i>
+              <i>JavaScript</i>
+              <i>React</i>
+            </div>
+
+          </article>
+
+
+          <article>
+
+            <span>02</span>
+
+            <h3>Back-end & dados</h3>
+
+            <p>
+              APIs, lógica, autenticação e
+              persistência de dados.
+            </p>
+
+            <div>
+              <i>Node.js</i>
+              <i>Express</i>
+              <i>PostgreSQL</i>
+              <i>JWT</i>
+            </div>
+
+          </article>
+
+
+          <article>
+
+            <span>03</span>
+
+            <h3>Hardware</h3>
+
+            <p>
+              Programação, eletrônica e interação
+              em projetos físicos.
+            </p>
+
+            <div>
+              <i>Arduino</i>
+              <i>Raspberry Pi</i>
+              <i>NeoPixel</i>
+              <i>sensores</i>
+            </div>
+
+          </article>
+
+
+          <article>
+
+            <span>04</span>
+
+            <h3>3D & criação</h3>
+
+            <p>
+              Modelagem, prototipagem e
+              fabricação digital.
+            </p>
+
+            <div>
+              <i>Blender</i>
+              <i>SketchUp</i>
+              <i>3D print</i>
+              <i>protótipos</i>
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="tech-line" data-morph>
+          HTML5 <b>·</b>
+          CSS3 <b>·</b>
+          JavaScript <b>·</b>
+          React <b>·</b>
+          Node.js <b>·</b>
+          PostgreSQL <b>·</b>
+          Arduino <b>·</b>
+          Raspberry Pi <b>·</b>
+          Blender
+        </div>
+
+
+        <div class="actions skills-actions">
+
+          <div class="actions__secondary">
+
+            <button class="cta cta--subtle" data-go="1">
+              ← sobre
+            </button>
+
+            <button class="cta cta--subtle" data-go="0">
+              início ↗
+            </button>
+
+          </div>
+
+
+          <div class="actions__primary">
+
+            <button class="cta cta--primary" data-go="3">
+              ver minha formação
+              <span>→</span>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+             04 — FORMAÇÃO
+             ===================================== -->
+
+    <section class="page" data-index="3" data-name="FORMAÇÃO">
+
+      <div class="page-inner formation-page">
+
+        <div class="page-title" data-morph>
+
+          <p class="eyebrow">
+            04 / DE ONDE VEM A BASE
+          </p>
+
+          <h2>
+            Formação<span>.</span>
+          </h2>
+
+        </div>
+
+
+        <div class="formation-track" data-morph>
+
+          <article>
+
+            <span class="formation-no">01</span>
+
+            <p>
+              IFSP · JACAREÍ
+            </p>
+
+            <h3>
+              Ensino Médio integrado à Informática
+            </h3>
+
+            <small>
+              Base técnica em informática,
+              programação e tecnologia, com projetos
+              práticos ao longo da formação.
+            </small>
+
+            <div>
+              informática · programação · projetos
+            </div>
+
+          </article>
+
+
+          <article>
+
+            <span class="formation-no">02</span>
+
+            <p>
+              FATEC · JACAREÍ
+            </p>
+
+            <h3>
+              Desenvolvimento de Software Multiplataforma
+            </h3>
+
+            <small>
+              Experiência acadêmica aplicada a
+              desenvolvimento web, banco de dados,
+              métodos ágeis e construção de sistemas.
+            </small>
+
+            <div>
+              web · PostgreSQL · Scrum
+            </div>
+
+          </article>
+
+
+          <article>
+
+            <span class="formation-no">03</span>
+
+            <p>
+              NA PRÁTICA
+            </p>
+
+            <h3>
+              Aprender fazendo
+            </h3>
+
+            <small>
+              Projetos pessoais e acadêmicos como
+              laboratório: do circuito no Arduino
+              ao sistema publicado na web.
+            </small>
+
+            <div>
+              hardware · software · 3D
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="formation-axis">
+          <span></span>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+
+
+        <div class="actions formation-actions">
+
+          <div class="actions__secondary">
+
+            <button class="cta cta--subtle" data-go="2">
+              ← skills
+            </button>
+
+            <button class="cta cta--subtle" data-go="0">
+              início ↗
+            </button>
+
+          </div>
+
+
+          <div class="actions__primary">
+
+            <button class="cta cta--primary" data-go="4">
+              ver projetos
+              <span>→</span>
+            </button>
+
+            <button class="cta cta--highlight" data-go="5">
+              fazer contato
+              <span>↗</span>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+             05 — PROJETOS
+             ===================================== -->
+
+    <section class="page" data-index="4" data-name="PROJETOS">
+
+      <div class="page-inner projects-page">
+
+
+        <!-- TÍTULO -->
+
+        <div class="page-title page-title--row" data-morph>
+
+          <div>
+
+            <p class="eyebrow">
+              05 / O QUE EU CONSTRUÍ
+            </p>
+
+            <h2>
+              Projetos<span>.</span>
+            </h2>
+
+          </div>
+
+
+          <p class="subtitle">
+            Do software ao hardware.
+            Ideias que saíram da tela.
+          </p>
+
+        </div>
+
+
+
+        <!-- GRID -->
+
+        <div class="project-grid" data-morph>
+
+
+          <!-- 01 -->
+
+          <button class="project-card featured" data-project="scrum">
+
+            <span class="project-no">
+              01
+            </span>
+
+            <small>
+              WEB / ACADÊMICO
+            </small>
+
+            <strong>
+              Scrum Dungeon
+            </strong>
+
+            <em>
+              HTML · CSS · JS · EJS · Express · PostgreSQL
+            </em>
+
+            <b>↗</b>
+
+          </button>
+
+
+
+          <!-- 02 -->
+
+          <button class="project-card" data-project="console">
+
+            <span class="project-no">
+              02
+            </span>
+
+            <small>
+              TCC / HARDWARE
+            </small>
+
+            <strong>
+              Console portátil
+            </strong>
+
+            <em>
+              Raspberry Pi · Arduino · Qt · Linux
+            </em>
+
+            <b>↗</b>
+
+          </button>
+
+
+
+          <!-- 03 -->
+
+          <button class="project-card" data-project="cube">
+
+            <span class="project-no">
+              03
+            </span>
+
+            <small>
+              ARDUINO / INTERAÇÃO
+            </small>
+
+            <strong>
+              NeoPixel Game Cube
+            </strong>
+
+            <em>
+              NeoPixel · Bluetooth · MPU6050
+            </em>
+
+            <b>↗</b>
+
+          </button>
+
+
+
+          <!-- 04 -->
+
+          <button class="project-card" data-project="safe">
+
+            <span class="project-no">
+              04
+            </span>
+
+            <small>
+              ARDUINO / ELETRÔNICA
+            </small>
+
+            <strong>
+              Cofre eletrônico
+            </strong>
+
+            <em>
+              Keypad · LCD · Servo · RGB
+            </em>
+
+            <b>↗</b>
+
+          </button>
+
+
+
+          <!-- 05 -->
+
+          <button class="project-card" data-project="ecoa">
+
+            <span class="project-no">
+              05
+            </span>
+
+            <small>
+              WEB / PROJETO
+            </small>
+
+            <strong>
+              ECOA
+            </strong>
+
+            <em>
+              HTML · CSS · JavaScript
+            </em>
+
+            <b>↗</b>
+
+          </button>
+
+
+
+          <!-- 06 -->
+
+          <button class="project-card" data-project="atelier">
+
+            <span class="project-no">
+              06
+            </span>
+
+            <small>
+              SOFTWARE / EM DESENVOLVIMENTO
+            </small>
+
+            <strong>
+              Sistema para ateliê
+            </strong>
+
+            <em>
+              gestão · perfis · produtos
+            </em>
+
+            <b>↗</b>
+
+          </button>
+
+
+
+          <!-- 06 -->
+
+          <button class="project-card" data-project="atelier">
+
+            <span class="project-no">
+              06
+            </span>
+
+            <small>
+              SOFTWARE / EM DESENVOLVIMENTO
+            </small>
+
+            <strong>
+              Sistema para ateliê
+            </strong>
+
+            <em>
+              gestão · perfis · produtos
+            </em>
+
+            <b>↗</b>
+
+          </button>
+
+
+
+          <!-- 06 -->
+
+          <button class="project-card" hidden data-project="atelier">
+
+            <span class="project-no">
+              06
+            </span>
+
+            <small>
+              SOFTWARE / EM DESENVOLVIMENTO
+            </small>
+
+            <strong>
+              Sistema para ateliê
+            </strong>
+
+            <em>
+              gestão · perfis · produtos
+            </em>
+
+            <b>↗</b>
+
+          </button>
+
+        </div>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <div class="actions projects-actions">
+
+          <div class="actions__secondary">
+
+            <button class="cta cta--subtle" data-go="3">
+              ← formação
+            </button>
+
+            <button class="cta cta--subtle" data-go="0">
+              início ↗
+            </button>
+
+          </div>
+
+          <!-- NAVEGAÇÃO DOS PROJETOS -->
+          <div class="project-navigation" data-project-navigation aria-label="Navegação dos projetos">
+
+            <button type="button" class="project-nav-button" data-project-prev aria-label="Projetos anteriores">
+              <span aria-hidden="true">←</span>
+            </button>
+
+            <div class="project-page-indicator" aria-live="polite">
+              <span data-project-current>01</span>
+              <i>/</i>
+              <span data-project-total>01</span>
+            </div>
+
+            <button type="button" class="project-nav-button" data-project-next aria-label="Próximos projetos">
+              <span aria-hidden="true">→</span>
+            </button>
+
+          </div>
+
+          <div class="actions__primary">
+
+            <button class="cta cta--primary" data-go="5">
+              fazer contato
+              <span>↗</span>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+             06 — CONTATO
+             ===================================== -->
+
+    <section class="page" data-index="5" data-name="CONTATO">
+
+      <div class="contact-orb orb-a"></div>
+      <div class="contact-orb orb-b"></div>
+
+
+      <div class="page-inner contact-page">
+
+        <div class="page-title" data-morph>
+
+          <p class="eyebrow">
+            06 / VAMOS CONSTRUIR
+          </p>
+
+          <h2>
+            Tem uma ideia?<br>
+            <em>Vamos tirar do papel.</em>
+          </h2>
+
+        </div>
+
+
+        <div class="contact-content" data-morph>
+
+          <div>
+
+            <p>
+              Se você chegou até aqui,
+              provavelmente existe alguma coisa
+              que quer criar, melhorar ou entender.
+            </p>
+
+            <p>
+              Me conte o que tem em mente.
+              A conversa começa simples.
+            </p>
+
+          </div>
+
+
+          <div class="contact-box">
+
+            <small>
+              CONTATO
+            </small>
+
+            <strong>
+              SEU_EMAIL_AQUI
+            </strong>
+
+            <button data-copy="SEU_EMAIL_AQUI">
+              copiar e-mail
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="actions contact-actions">
+
+          <div class="actions__secondary">
+
+            <button class="cta cta--subtle" data-go="3">
+              formação
+            </button>
+
+            <button class="cta cta--subtle" data-go="2">
+              skills
+            </button>
+
+          </div>
+
+
+          <div class="actions__primary">
+
+            <button class="cta cta--primary" data-go="0">
+              voltar ao início
+              <span>↗</span>
+            </button>
+
+            <button class="cta cta--highlight" data-go="4">
+              rever projetos
+              <span>↗</span>
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <footer data-morph>
+
+          <span>
+            © 2026 Lorenzo
+          </span>
+
+          <span>
+            feito à mão · código próprio
+          </span>
+
+          <span>
+            JACAREÍ · SP
+          </span>
+
+        </footer>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================================
+         MODAL
+         ========================================= -->
+
+  <dialog id="projectModal">
+
+    <button class="modal-close" type="button" aria-label="Fechar">
+      ×
+    </button>
+
+
+    <div class="modal-visual" id="modalVisual">
+
+      <img id="modalImage" src="" alt="Imagem do projeto">
+
+    </div>
+
+
+    <div class="modal-copy">
+
+      <p class="eyebrow">
+
+        <span id="modalNo">
+          01
+        </span>
+
+        /
+
+        <span id="modalType">
+          PROJETO
+        </span>
+
+      </p>
+
+
+      <h2 id="modalTitle">
+        Projeto
+      </h2>
+
+
+      <p id="modalDescription"></p>
+
+
+      <div id="modalTags"></div>
+
+
+      <small id="modalNote"></small>
+
+    </div>
+
+  </dialog>
+
+
+
+  <!-- TOAST -->
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
