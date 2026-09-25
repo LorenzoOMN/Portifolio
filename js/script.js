@@ -959,11 +959,11 @@ window.addEventListener(
     function updateCardsPerPage() {
         const width = window.innerWidth;
         if (width <= 650) {
-            cardsPerPage = 4; // Mobile: 2x2
+            cardsPerPage = 6; // Mobile: 2x2
         } else if (width <= 1000) {
             cardsPerPage = 5; // Tablet
         } else {
-            cardsPerPage = 6; // Desktop: 1 grande + 4 pequenos
+            cardsPerPage = 7; // Desktop: 1 grande + 4 pequenos
         }
     }
 
