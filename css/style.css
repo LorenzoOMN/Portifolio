@@ -1530,6 +1530,230 @@ button:focus-visible {
 
 }
 
+/* =========================================================
+   FOTO DO SOBRE
+   ========================================================= */
+
+.about-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.photo-frame {
+    position: relative;
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 3 / 4;
+    border: 1px solid var(--line);
+    background: linear-gradient(145deg,
+            rgba(123, 228, 56, .08),
+            rgba(155, 92, 255, .08));
+    overflow: visible;
+    transition: .4s var(--ease);
+    transform: rotate(-1.5deg);
+}
+
+.photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 30% 30%,
+            rgba(123, 228, 56, .15),
+            transparent 50%),
+        radial-gradient(circle at 70% 70%,
+            rgba(155, 92, 255, .15),
+            transparent 50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.photo-frame::after {
+    content: "L";
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: rgba(123, 228, 56, .25);
+    font: 800 100px 'DM Mono';
+    text-shadow: 0 0 40px var(--green-glow);
+    z-index: 0;
+    transform: skew(-8deg);
+    transition: .4s var(--ease);
+}
+
+/* Cantos decorativos tech */
+.photo-frame .corner {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    z-index: 4;
+    pointer-events: none;
+    transition: .4s var(--ease);
+}
+
+.photo-frame .corner::before,
+.photo-frame .corner::after {
+    content: "";
+    position: absolute;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green-glow);
+}
+
+.photo-frame .corner-tl {
+    top: -1px;
+    left: -1px;
+}
+
+.photo-frame .corner-tl::before {
+    width: 14px;
+    height: 1px;
+    top: 0;
+    left: 0;
+}
+
+.photo-frame .corner-tl::after {
+    width: 1px;
+    height: 14px;
+    top: 0;
+    left: 0;
+}
+
+.photo-frame .corner-tr {
+    top: -1px;
+    right: -1px;
+}
+
+.photo-frame .corner-tr::before {
+    width: 14px;
+    height: 1px;
+    top: 0;
+    right: 0;
+}
+
+.photo-frame .corner-tr::after {
+    width: 1px;
+    height: 14px;
+    top: 0;
+    right: 0;
+}
+
+.photo-frame .corner-bl {
+    bottom: -1px;
+    left: -1px;
+}
+
+.photo-frame .corner-bl::before {
+    width: 14px;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+}
+
+.photo-frame .corner-bl::after {
+    width: 1px;
+    height: 14px;
+    bottom: 0;
+    left: 0;
+}
+
+.photo-frame .corner-br {
+    bottom: -1px;
+    right: -1px;
+}
+
+.photo-frame .corner-br::before {
+    width: 14px;
+    height: 1px;
+    bottom: 0;
+    right: 0;
+}
+
+.photo-frame .corner-br::after {
+    width: 1px;
+    height: 14px;
+    bottom: 0;
+    right: 0;
+}
+
+/* Badge decorativo com número */
+.photo-badge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 32px;
+    height: 32px;
+    background: var(--bg);
+    border: 1px solid var(--green);
+    display: grid;
+    place-items: center;
+    font: 500 9px 'DM Mono';
+    color: var(--green);
+    letter-spacing: .05em;
+    z-index: 5;
+    box-shadow: 0 0 12px var(--green-glow);
+    transform: skew(-8deg);
+    transition: .4s var(--ease);
+}
+
+.photo-frame:hover {
+    border-color: var(--green);
+    box-shadow:
+        0 0 25px rgba(123, 228, 56, .15),
+        inset 0 0 25px rgba(155, 92, 255, .08);
+    transform: rotate(0deg) translateY(-4px);
+}
+
+.photo-frame:hover .corner::before,
+.photo-frame:hover .corner::after {
+    background: var(--purple);
+    box-shadow: 0 0 10px var(--purple-glow);
+}
+
+.photo-frame:hover .photo-badge {
+    border-color: var(--purple);
+    color: var(--purple);
+    box-shadow: 0 0 15px var(--purple-glow);
+}
+
+.photo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    transition: .4s var(--ease);
+}
+
+.photo-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.photo-label {
+    font: 500 7px 'DM Mono';
+    color: var(--green);
+    letter-spacing: .2em;
+    text-shadow: 0 0 8px var(--green-glow);
+    text-transform: uppercase;
+}
+
+.photo-year {
+    font: 500 7px 'DM Mono';
+    color: var(--purple);
+    letter-spacing: .15em;
+    text-shadow: 0 0 8px var(--purple-glow);
+    align-self: flex-end;
+}
+
 
 /* =========================================================
    SKILLS
@@ -1922,13 +2146,16 @@ button:focus-visible {
 .project-grid {
     display: grid;
     grid-template-columns: 1.15fr repeat(3, 1fr);
-    grid-template-rows: repeat(2, minmax(150px, 1fr)); /* REDUZIDO de 190px para 155px */
+    grid-template-rows: repeat(2, minmax(150px, 1fr));
+    /* REDUZIDO de 190px para 155px */
     gap: clamp(8px, 1vw, 12px);
     height: min(400px, 48vh);
     min-height: 0;
     margin-top: clamp(20px, 3vh, 30px);
-    overflow: hidden; /* MUDADO: era visible */
-    grid-auto-rows: 155px; /* REDUZIDO */
+    overflow: hidden;
+    /* MUDADO: era visible */
+    grid-auto-rows: 155px;
+    /* REDUZIDO */
     grid-auto-flow: row;
     align-content: start;
     flex: 0 0 auto;
@@ -3117,6 +3344,24 @@ dialog.closing {
 
     }
 
+    /* =========================================================
+   TABLET - FOTO
+   ========================================================= */
+
+    .photo-frame {
+        max-width: 200px;
+    }
+
+    .photo-frame::after {
+        font-size: 80px;
+    }
+
+    .photo-badge {
+        width: 28px;
+        height: 28px;
+        font-size: 8px;
+    }
+
 
     .skills-grid {
 
@@ -3410,9 +3655,50 @@ dialog.closing {
 
     }
 
+    .about-columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-photo {
+        order: -1;
+        margin-bottom: 10px;
+    }
+
+    /* =========================================================
+   MOBILE - FOTO
+   ========================================================= */
+
+    .about-columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-photo {
+        order: -1;
+        margin-bottom: 10px;
+    }
+
+    .photo-frame {
+        max-width: 180px;
+        margin: 0 auto;
+    }
+
+    .photo-frame::after {
+        font-size: 70px;
+    }
+
+    .photo-badge {
+        width: 26px;
+        height: 26px;
+        font-size: 7px;
+        top: -10px;
+        right: -10px;
+    }
+
 
     /* ==============================
-       SKILLS
+       SOCIAL
        ============================== */
     .social-row {
         display: flex;
