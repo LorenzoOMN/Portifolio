@@ -1215,3 +1215,113 @@ window.addEventListener(
     renderPage(1, false);
 
 })();
+
+/* =========================================================
+   EFEITO DE FUNDO: RASTRO DE LUZ LÍQUIDA (NEON TRAIL)
+   ========================================================= */
+
+(function () {
+    'use strict';
+
+    // Desativa em mobile ou se o usuário prefere menos movimento
+    if (
+        !window.matchMedia('(hover: hover) and (pointer: fine)').matches ||
+        prefersReduced
+    ) {
+        return;
+    }
+
+    const canvas = document.getElementById('trailCanvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+
+    let width, height;
+    let points = [];
+    let isDrawing = false;
+    let drawTimeout;
+
+    // Configura o tamanho do canvas
+    function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Captura o movimento do mouse
+    window.addEventListener('mousemove', (e) => {
+        isDrawing = true;
+        
+        // Adiciona o ponto atual ao rastro
+        points.push({ x: e.clientX, y: e.clientY });
+
+        // Limita a quantidade de pontos para não travar o site
+        if (points.length > 50) {
+            points.shift();
+        }
+
+        // Para de desenhar se o mouse ficar parado
+        clearTimeout(drawTimeout);
+        drawTimeout = setTimeout(() => {
+            isDrawing = false;
+        }, 100);
+    });
+
+    // Loop de animação
+    function animate() {
+        // 1. Efeito de "fade": desenha um retângulo preto semi-transparente 
+        // para apagar o rastro antigo suavemente.
+        // Usamos a cor exata do seu fundo (--bg: #070808)
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.fillStyle = 'rgba(7, 8, 8, 0.12)'; 
+        ctx.fillRect(0, 0, width, height);
+
+        // 2. Desenha o rastro brilhante
+        if (points.length > 1) {
+            ctx.globalCompositeOperation = 'lighter'; // Modo de mistura para brilho neon
+            
+            ctx.beginPath();
+            ctx.moveTo(points[0].x, points[0].y);
+
+            // Cria uma curva suave passando pelos pontos
+            for (let i = 1; i < points.length - 1; i++) {
+                const xc = (points[i].x + points[i + 1].x) / 2;
+                const yc = (points[i].y + points[i + 1].y) / 2;
+                ctx.quadraticCurveTo(points[i].x, points[i].y, xc, yc);
+            }
+
+            // Cria o gradiente do rastro (Verde -> Roxo)
+            const gradient = ctx.createLinearGradient(
+                points[0].x, points[0].y,
+                points[points.length - 1].x, points[points.length - 1].y
+            );
+            gradient.addColorStop(0, 'rgba(123, 228, 56, 0)');      // Cauda transparente
+            gradient.addColorStop(0.5, 'rgba(123, 228, 56, 0.5)');  // Verde no meio
+            gradient.addColorStop(1, 'rgba(155, 92, 255, 0.9)');    // Roxo na ponta
+
+            ctx.strokeStyle = gradient;
+            ctx.lineWidth = 3;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.stroke();
+
+            // Adiciona um brilho mais grosso e suave por baixo
+            ctx.lineWidth = 10;
+            ctx.globalAlpha = 0.3;
+            ctx.stroke();
+            ctx.globalAlpha = 1.0;
+        }
+
+        // Remove pontos antigos se o mouse parou
+        if (!isDrawing && points.length > 0) {
+            points.shift();
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+})();

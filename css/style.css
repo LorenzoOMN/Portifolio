@@ -3256,6 +3256,27 @@ dialog.closing {
 
 }
 
+/* =========================================================
+   RASTRO DE LUZ NO FUNDO (TRAIL CANVAS)
+   ========================================================= */
+
+#trailCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5; /* Fica acima do matrix (0), mas abaixo do conteúdo (10) */
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+/* Esconde em telas pequenas para não pesar */
+@media (max-width: 650px), (hover: none) {
+    #trailCanvas {
+        display: none !important;
+    }
+}
 
 /* =========================================================
    ANIMAÇÕES
