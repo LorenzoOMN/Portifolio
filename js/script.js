@@ -938,6 +938,178 @@ window.addEventListener(
 );
 
 /* =========================================================
+   CURSOR CIRCLE (GRANDE, SEM DELAY)
+   ========================================================= */
+
+(function () {
+    'use strict';
+
+    if (
+        !window.matchMedia('(hover: hover) and (pointer: fine)').matches ||
+        prefersReduced
+    ) {
+        return;
+    }
+
+    const circle = document.querySelector('.cursor-circle');
+    if (!circle) return;
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+
+    const hoverTargets = document.querySelectorAll(
+        'a, button, [data-go], [data-project], [data-copy],' +
+        '.project-card, .menu-button, .modal-close,' +
+        '.cta, .social-row button, .project-nav-button,' +
+        '.skills-grid article, .formation-track article'
+    );
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        // Posição DIRETA, sem delay
+        circle.style.left = mouseX + 'px';
+        circle.style.top = mouseY + 'px';
+    });
+
+    document.addEventListener('mouseleave', () => {
+        circle.classList.add('is-hidden');
+    });
+
+    document.addEventListener('mouseenter', () => {
+        circle.classList.remove('is-hidden');
+    });
+
+    hoverTargets.forEach((el) => {
+        el.addEventListener('mouseenter', () => {
+            circle.classList.add('is-hovering');
+        });
+        el.addEventListener('mouseleave', () => {
+            circle.classList.remove('is-hovering');
+        });
+    });
+
+})();
+
+
+/* =========================================================
+   CANVAS DE ONDAS/RIPPLES (EFEITO VISÍVEL NO FUNDO)
+   ========================================================= */
+
+(function () {
+    'use strict';
+
+    if (
+        !window.matchMedia('(hover: hover) and (pointer: fine)').matches ||
+        prefersReduced
+    ) {
+        return;
+    }
+
+    const canvas = document.getElementById('waveCanvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+
+    let width, height;
+    let ripples = [];
+    let mouseX = -1000;
+    let mouseY = -1000;
+    let lastMouseX = mouseX;
+    let lastMouseY = mouseY;
+
+    function resize() {
+        const d = Math.min(window.devicePixelRatio || 1, 1.4);
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width * d;
+        canvas.height = height * d;
+        ctx.setTransform(d, 0, 0, d, 0, 0);
+    }
+
+    class Ripple {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.radius = 0;
+            this.maxRadius = 150 + Math.random() * 100;
+            this.opacity = 0.6;
+            this.speed = 3 + Math.random() * 2;
+            this.lineWidth = 2;
+        }
+
+        update() {
+            this.radius += this.speed;
+            this.opacity = 0.6 * (1 - this.radius / this.maxRadius);
+            this.lineWidth = 2 * (1 - this.radius / this.maxRadius);
+        }
+
+        draw() {
+            if (this.opacity <= 0) return;
+
+            ctx.strokeStyle = `rgba(123, 228, 56, ${this.opacity * 0.4})`;
+            ctx.lineWidth = this.lineWidth;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.stroke();
+
+            // Círculo interno roxo
+            ctx.strokeStyle = `rgba(155, 92, 255, ${this.opacity * 0.2})`;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius * 0.7, 0, Math.PI * 2);
+            ctx.stroke();
+        }
+
+        isDead() {
+            return this.opacity <= 0 || this.radius >= this.maxRadius;
+        }
+    }
+
+    // Detecta movimento do mouse e cria ripples
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        // Calcula distância do último movimento
+        const dx = mouseX - lastMouseX;
+        const dy = mouseY - lastMouseY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        // Cria ripple se o mouse se moveu o suficiente
+        if (distance > 15) {
+            ripples.push(new Ripple(mouseX, mouseY));
+            lastMouseX = mouseX;
+            lastMouseY = mouseY;
+        }
+    });
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        // Atualiza e desenha ripples
+        for (let i = ripples.length - 1; i >= 0; i--) {
+            ripples[i].update();
+            ripples[i].draw();
+
+            if (ripples[i].isDead()) {
+                ripples.splice(i, 1);
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    resize();
+    animate();
+
+    window.addEventListener('resize', () => {
+        resize();
+    });
+
+})();
+
+/* =========================================================
    PAGINAÇÃO / DESLIZE DOS PROJETOS
    ========================================================= */
 
