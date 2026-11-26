@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18231a"/><stop offset="1" stop-color="#11131a"/></linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#dcebd8" stroke-opacity=".07"/></pattern>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/><rect width="1200" height="760" fill="url(#grid)"/>
+  <circle cx="600" cy="340" r="190" fill="none" stroke="#a6e47b" stroke-opacity=".18" stroke-width="2"/>
+  <circle cx="600" cy="340" r="145" fill="none" stroke="#b18aff" stroke-opacity=".25" stroke-width="2" stroke-dasharray="8 14"/>
+  <path d="M510 340h180M600 250v180" stroke="#a6e47b" stroke-opacity=".3" stroke-width="2"/>
+  <text x="600" y="520" fill="#a6e47b" text-anchor="middle" font-family="monospace" font-size="22" letter-spacing="6">ABP / 1º SEMESTRE</text>
+  <text x="600" y="565" fill="#aab5aa" text-anchor="middle" font-family="monospace" font-size="13" letter-spacing="3">IMAGEM DO SCRUM DUNGEON</text>
+  <text x="60" y="690" fill="#738074" font-family="monospace" font-size="13" letter-spacing="3">SUBSTITUA ESTE ARQUIVO PELA IMAGEM DO PROJETO</text>
+</svg>

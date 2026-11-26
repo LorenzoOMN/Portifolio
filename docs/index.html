@@ -1,11 +1,187 @@
-
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfólio - LORENZO DE OLIVEIRA MILANELO NOGUEIRA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b09">
+  <meta name="description" content="Portfólio de Lorenzo — estudante de Desenvolvimento de Software Multiplataforma, desenvolvedor e criador de projetos de software e hardware.">
+  <meta property="og:title" content="Lorenzo — Desenvolvedor">
+  <meta property="og:description" content="Projetos, experiências e caminhos entre software e hardware.">
+  <meta property="og:type" content="website">
+  <title>Lorenzo — Desenvolvedor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-    <h1>Bem vindo ao Portfólio de LORENZO DE OLIVEIRA MILANELO NOGUEIRA</h1>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Lorenzo, início">
+      <span class="brand-mark">L</span><span>LORENZO<span class="brand-dot">.</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a><a href="#formacao">Formação</a><a href="#projetos">Projetos</a><a href="#habilidades">Habilidades</a><a class="nav-contact" href="#contato">Contato <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="inicio">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="status-dot"></span> PORTFÓLIO • DESENVOLVIMENTO & TECNOLOGIA</p>
+        <h1>Ideias ganham<br>forma quando<br><em>começamos.</em></h1>
+        <p class="hero-lead">Sou <strong>Lorenzo</strong>, estudante de Desenvolvimento de Software Multiplataforma. Gosto de transformar curiosidade em projetos — do código à experimentação com hardware.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projetos">Explorar projetos <span>↘</span></a>
+          <a class="text-link" href="#sobre">Conheça minha trajetória <span>↗</span></a>
+        </div>
+        <div class="hero-meta"><span>JACAREÍ — SP, BRASIL</span><span>DISPONÍVEL PARA CONEXÕES</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="portrait-frame">
+          <!-- FOTO DE PERFIL: substitua perfil-placeholder.svg pelo caminho da sua foto -->
+          <img src="assets/images/foto-perfil-placeholder.svg" alt="Espaço reservado para foto de Lorenzo" class="portrait-image">
+          <div class="portrait-caption"><span>01 / PERFIL</span><span>LORENZO</span></div>
+        </div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="visual-index">DEV<br><b>2026</b></div>
+        <span class="visual-cross cross-a">+</span><span class="visual-cross cross-b">+</span>
+      </div>
+      <a class="scroll-cue" href="#sobre"><span></span> ROLE PARA DESCOBRIR</a>
+    </section>
+
+    <section class="section section-about" id="sobre">
+      <div class="section-heading">
+        <p class="eyebrow">01 / SOBRE MIM</p>
+        <h2>Curiosidade que<br><em>vira construção.</em></h2>
+      </div>
+      <div class="about-layout">
+        <div class="about-copy">
+          <p class="lead-copy">A tecnologia me interessa principalmente pelo que ela permite criar.</p>
+          <p>Tenho interesse por desenvolvimento de software, interfaces, banco de dados e também por projetos que conectam o mundo digital ao físico. Gosto de aprender explorando, testar possibilidades e entender o funcionamento das ferramentas que utilizo.</p>
+          <p>Ao longo da minha formação, venho desenvolvendo projetos acadêmicos e pessoais que passam por aplicações web, eletrônica, programação embarcada e prototipagem.</p>
+          <a class="inline-link" href="#contato">Vamos conversar <span>↗</span></a>
+        </div>
+        <aside class="about-details">
+          <div class="detail-row"><span>LOCALIZAÇÃO</span><strong>Jacareí, São Paulo — Brasil</strong></div>
+          <div class="detail-row"><span>FORMAÇÃO ATUAL</span><strong>Desenvolvimento de Software Multiplataforma</strong></div>
+          <div class="detail-row"><span>INTERESSES</span><strong>Software · Hardware · UI · Tecnologia</strong></div>
+          <div class="detail-row"><span>FOCO</span><strong>Aprender, experimentar e construir</strong></div>
+          <div class="about-note"><span>“</span><p>Não quero apenas aprender como a tecnologia funciona. Quero descobrir o que posso fazer com ela.</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-formation" id="formacao">
+      <div class="section-heading section-heading-row">
+        <div><p class="eyebrow">02 / FORMAÇÃO</p><h2>Onde construo<br><em>minha base.</em></h2></div>
+        <p class="section-intro">Conhecimento construído na sala de aula, nos projetos e na prática.</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <span class="timeline-number">01</span><div><p class="micro-label">FORMAÇÃO TÉCNICA</p><h3>Ensino Médio integrado à Informática</h3><p>Instituto Federal de São Paulo — Campus Jacareí.</p><span class="timeline-tag">Informática · Programação · Tecnologia</span></div>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-number">02</span><div><p class="micro-label">GRADUAÇÃO</p><h3>Desenvolvimento de Software Multiplataforma</h3><p>Faculdade de Tecnologia de São Paulo — FATEC Jacareí.</p><span class="timeline-tag">Desenvolvimento · Banco de dados · Métodos ágeis</span></div>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-number">03</span><div><p class="micro-label">APRENDIZADO CONTÍNUO</p><h3>Projetos e experimentação</h3><p>Aprendizado aplicado em projetos acadêmicos e pessoais, explorando diferentes tecnologias e áreas.</p><span class="timeline-tag">Prática · Pesquisa · Prototipagem</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-projects" id="projetos">
+      <div class="section-heading section-heading-row">
+        <div><p class="eyebrow">03 / PORTFÓLIO</p><h2>Projetos que<br><em>saíram do papel.</em></h2></div>
+        <p class="section-intro">Uma seleção de experiências acadêmicas e pessoais. Os projetos acadêmicos têm espaço próprio para contexto, contribuição, tecnologias e repositório.</p>
+      </div>
+
+      <div class="project-group-label"><span>PROJETOS ACADÊMICOS</span><i></i><span>FATEC JACAREÍ</span></div>
+      <div class="academic-grid">
+        <article class="academic-card">
+          <div class="project-image image-1">
+            <!-- IMAGEM DO PROJETO 1DSM: coloque o arquivo em assets/images e atualize o src -->
+            <img src="assets/images/projeto-1dsm-placeholder.svg" alt="Espaço reservado para imagem do projeto acadêmico 1DSM">
+            <span class="image-label">IMAGEM DO PROJETO / 01</span>
+            <span class="project-year">01DSM</span>
+          </div>
+          <div class="academic-content">
+            <div class="card-topline"><span>ABP • 1º SEMESTRE</span><span>01 / 02</span></div>
+            <h3>Scrum Dungeon</h3>
+            <p class="project-summary">Portal de aprendizagem gamificado sobre metodologias ágeis, que transforma conteúdos e avaliações em uma jornada com temática de RPG.</p>
+            <div class="project-info">
+              <div><span>DESCRIÇÃO</span><p>Plataforma web desenvolvida no contexto acadêmico para apoiar o aprendizado de Scrum por meio de capítulos, desafios e acompanhamento de progresso.</p></div>
+              <div><span>CONTRIBUIÇÃO</span><p>Participação no desenvolvimento da aplicação, estrutura das páginas e integração dos recursos de navegação e aprendizagem.</p></div>
+              <div><span>TECNOLOGIAS</span><div class="tag-list"><i>HTML</i><i>CSS</i><i>JavaScript</i><i>EJS</i><i>Express</i><i>PostgreSQL</i><i>JWT</i></div></div>
+            </div>
+            <a class="project-link" href="https://github.com/SEU_USUARIO/SCRUM-DUNGEON" target="_blank" rel="noopener noreferrer">Adicionar repositório do projeto <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="academic-card academic-card-current">
+          <div class="project-image image-2">
+            <!-- IMAGEM DO PROJETO 2DSM: coloque o arquivo em assets/images e atualize o src -->
+            <img src="assets/images/projeto-2dsm-placeholder.svg" alt="Espaço reservado para imagem do projeto acadêmico do segundo semestre">
+            <span class="image-label">IMAGEM DO PROJETO / 02</span>
+            <span class="project-year">2º SEM.</span>
+          </div>
+          <div class="academic-content">
+            <div class="card-topline"><span>ABP • PROJETO ATUAL</span><span>02 / 02</span></div>
+            <h3>Atmos °</h3>
+            <p class="project-summary">Plataforma de monitoramento de serviços e visualização de indicadores de consumo energético e emissões de CO₂e.</p>
+            <div class="project-info">
+              <div><span>DESCRIÇÃO</span><p>Aplicação web que reúne dados de serviços monitorados e apresenta indicadores em painéis, ranking, comparação e visualizações geográficas.</p></div>
+              <div><span>CONTRIBUIÇÃO</span><p>Desenvolvimento da interface e das experiências de visualização, incluindo componentes de monitoramento, globo/mapa e telas de comparação e ranking.</p></div>
+              <div><span>TECNOLOGIAS</span><div class="tag-list"><i>React</i><i>TypeScript</i><i>Vite</i><i>CSS</i><i>Node.js</i><i>Express</i><i>PostgreSQL</i></div></div>
+            </div>
+            <a class="project-link" href="https://github.com/SEU_USUARIO/ATMOS" target="_blank" rel="noopener noreferrer">Adicionar repositório do projeto <span>↗</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="project-group-label personal-label"><span>PROJETOS PESSOAIS & EXPERIMENTAIS</span><i></i><span>LABORATÓRIO</span></div>
+      <div class="personal-grid">
+        <article class="personal-card"><span class="personal-number">01</span><div class="personal-symbol">⌘</div><h3>Console portátil</h3><p>Conceito de videogame portátil de baixo custo com Raspberry Pi e Arduino, interface própria e seleção de jogos.</p><div class="tag-list"><i>Raspberry Pi</i><i>Arduino</i><i>Linux</i><i>Qt</i></div><a href="https://github.com/SEU_USUARIO/CONSOLE-PORTATIL" target="_blank" rel="noopener noreferrer" aria-label="Adicionar repositório do Console portátil">REPOSITÓRIO ↗</a></article>
+        <article class="personal-card"><span class="personal-number">02</span><div class="personal-symbol">▦</div><h3>NeoPixel Game Cube</h3><p>Plataforma experimental de jogos com matriz NeoPixel, Bluetooth, botões e sensor de movimento.</p><div class="tag-list"><i>Arduino</i><i>NeoPixel</i><i>Bluetooth</i><i>MPU6050</i></div><a href="https://github.com/SEU_USUARIO/NEOPIXEL-GAME-CUBE" target="_blank" rel="noopener noreferrer" aria-label="Adicionar repositório do NeoPixel Game Cube">REPOSITÓRIO ↗</a></article>
+        <article class="personal-card"><span class="personal-number">03</span><div class="personal-symbol">⌑</div><h3>Cofre eletrônico</h3><p>Protótipo de controle de acesso com teclado matricial, display LCD, servo motor e sinalização RGB.</p><div class="tag-list"><i>Arduino</i><i>Keypad</i><i>LCD</i><i>Servo</i></div><a href="https://github.com/SEU_USUARIO/COFRE-ELETRONICO" target="_blank" rel="noopener noreferrer" aria-label="Adicionar repositório do Cofre eletrônico">REPOSITÓRIO ↗</a></article>
+        <article class="personal-card"><span class="personal-number">04</span><div class="personal-symbol">◇</div><h3>ECOA</h3><p>Projeto web com foco em organização da informação, estrutura de conteúdo e experiência de navegação.</p><div class="tag-list"><i>HTML</i><i>CSS</i><i>JavaScript</i></div><a href="https://github.com/SEU_USUARIO/ECOA" target="_blank" rel="noopener noreferrer" aria-label="Adicionar repositório do ECOA">REPOSITÓRIO ↗</a></article>
+        <article class="personal-card"><span class="personal-number">05</span><div class="personal-symbol">⌂</div><h3>Sistema para ateliê</h3><p>Conceito de aplicação para apoiar a gestão de produtos, serviços e perfis de acesso de um pequeno ateliê.</p><div class="tag-list"><i>Software</i><i>Gestão</i><i>Perfis</i></div><a href="https://github.com/SEU_USUARIO/SISTEMA-ATELIE" target="_blank" rel="noopener noreferrer" aria-label="Adicionar repositório do Sistema para ateliê">REPOSITÓRIO ↗</a></article>
+      </div>
+    </section>
+
+    <section class="section section-skills" id="habilidades">
+      <div class="section-heading section-heading-row">
+        <div><p class="eyebrow">04 / FERRAMENTAS</p><h2>O que uso para<br><em>fazer acontecer.</em></h2></div>
+        <p class="section-intro">Tecnologias e áreas que venho estudando e aplicando nos meus projetos.</p>
+      </div>
+      <div class="skills-grid">
+        <article><span>01</span><h3>Front-end</h3><p>Interfaces, componentes e experiências responsivas.</p><div class="tag-list"><i>HTML</i><i>CSS</i><i>JavaScript</i><i>React</i><i>TypeScript</i></div></article>
+        <article><span>02</span><h3>Back-end & dados</h3><p>Regras de negócio, APIs e persistência de dados.</p><div class="tag-list"><i>Node.js</i><i>Express</i><i>PostgreSQL</i><i>JWT</i></div></article>
+        <article><span>03</span><h3>Hardware</h3><p>Programação embarcada, eletrônica e prototipagem.</p><div class="tag-list"><i>Arduino</i><i>Raspberry Pi</i><i>NeoPixel</i><i>Sensores</i></div></article>
+        <article><span>04</span><h3>Criação & ferramentas</h3><p>Modelagem, documentação e organização de projetos.</p><div class="tag-list"><i>Blender</i><i>Git</i><i>GitHub</i><i>Figma</i></div></article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+      <div class="contact-glow"></div>
+      <div class="contact-inner">
+        <p class="eyebrow">05 / CONTATO</p>
+        <h2>Vamos criar algo<br><em>interessante?</em></h2>
+        <p>Estou aberto a trocar ideias, aprender com outras pessoas e conhecer novas oportunidades.</p>
+        <div class="contact-actions">
+          <!-- SUBSTITUA os links abaixo pelos seus perfis reais -->
+          <a class="button button-primary" href="mailto:SEU_EMAIL_AQUI">Enviar um e-mail <span>↗</span></a>
+          <a class="button button-outline" href="https://github.com/SEU_USUARIO" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+          <a class="button button-outline" href="https://www.linkedin.com/in/SEU_USUARIO/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+        </div>
+      </div>
+      <footer class="site-footer"><a class="brand" href="#inicio"><span class="brand-mark">L</span><span>LORENZO<span class="brand-dot">.</span></span></a><span>FEITO COM CURIOSIDADE E CÓDIGO.</span><span>© <span id="current-year">2026</span> LORENZO</span></footer>
+    </section>
+  </main>
 </body>
 </html>

@@ -1,0 +1,18 @@
+IMAGENS DO PORTFÓLIO
+
+Os SVGs atuais são imagens temporárias para mostrar onde cada foto ficará.
+
+Para usar suas próprias imagens:
+1. Coloque os arquivos nesta pasta (`docs/assets/images/`).
+2. Abra `docs/index.html`.
+3. Procure os comentários `FOTO DE PERFIL`, `IMAGEM DO PROJETO 1DSM` e `IMAGEM DO PROJETO 2DSM`.
+4. Altere o `src` para o nome e a extensão reais do seu arquivo.
+
+Exemplo:
+  <img src="assets/images/minha-foto.jpg" ...>
+
+Sugestões:
+- Foto de perfil: retrato vertical, proporção aproximada 4:5.
+- Imagens dos projetos: capturas de tela ou fotos horizontais, proporção aproximada 16:9.
+
+Não é necessário manter a extensão `.svg`: use `.jpg`, `.jpeg`, `.png` ou `.webp` conforme o arquivo.
