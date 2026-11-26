@@ -9,7 +9,6 @@ Portfólio acadêmico e profissional desenvolvido em HTML, CSS e JavaScript, pub
 - **Curso:** Desenvolvimento de Software Multiplataforma (DSM)
 - **Turma:** 1DSM
 - **Repositório:** https://github.com/LorenzoOMN/Portifolio-Fatec
-- **Portfólio institucional:** https://lorenzoomn.github.io/Portifolio-Fatec/
 
 ## Sobre o portfólio
 
